@@ -32,15 +32,18 @@ public class Indentation {
 				}
 
 				//if the last line had a bracket
-				if (!prev) {
+				if (prev) {
 					if (spaces <= previous) {
 						passed = false;
 						System.out.println(line);
+					}
 				}
 
 				//check if this line has a bracket
 				if (line.indexOf('{') != -1) {
 					prev = true;
+				} else {
+					prev = false;
 				}
 
 				previous = spaces;

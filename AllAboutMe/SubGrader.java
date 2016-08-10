@@ -60,7 +60,8 @@ public class SubGrader {
 				}
 			}
 
-			tests[14].passed = Indentation.assess("AboutMe.java");
+			tests[15].passed = Indentation.assess("AboutMe.java");
+			totals[tests[15].group] += tests[15].point;
 
 			for (int i = 0; i < tests.length; i++) {
 				if (!tests[i].passed) {

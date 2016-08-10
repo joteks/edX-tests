@@ -36,7 +36,7 @@ echo "$program" | grep -e '^.*[[:alnum:]]'\.'myAge'\('.*'\)'.*$' && test63=true
 
 echo "$program" | grep -e '^.*AboutMe[[:space:]]*'\('[[:space:]]*String[[:space:]]*[[:alnum:]]*[[:space:]]*,[[:space:]]*String[[:space:]]*[[:alnum:]]*[[:space:]]*,[[:space:]]*int[[:space:]]*[[:alnum:]]*[[:space:]]*'\)'.*$' && test7=true
 
-echo "$program" | grep -e '^.*this'\.'[[:alnum:]]*.*this'\.'[[:alnum:]]*.*this'\.'[[:alnum:]]*.*$' && test8=true
+echo "$program" | sed -e '^.*this'\.'[[:alnum:]]*.*$' && test8=true
 
 echo "$program" | grep -e '^.*String[[:space:]]*[[:lower:]][[:alnum:]]*[[:space:]]*;[[:space:]]*String[[:space:]]*[[:lower:]][[:alnum:]]*[[:space:]]*;[[:space:]]*int[[:space:]]*[[:lower:]][[:alnum:]]*[[:space:]]*;[[:space:]]*.*$' && test91=true
 

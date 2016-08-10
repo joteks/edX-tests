@@ -1,5 +1,11 @@
-rm score.txt
- > score.txt
+#!/bin/bash
+
+if [ ! -e score.txt ]; then
+    > score.txt
+else
+    rm score.txt
+    > score.txt
+fi
 
 function checkExists()
 {
