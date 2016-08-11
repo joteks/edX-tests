@@ -1,4 +1,6 @@
 
+import java.util.Scanner;
+
 /**
 
  * Topic 1, Project 1 : AboutMe.java
@@ -34,7 +36,8 @@ public class AboutMe
     }
     public static void main(String[] args) {
         System.out.println("Hello");
-        AboutMe ati = new AboutMe("Ati", "West Lafayette High School", 15);
+        Scanner read = new Scanner(System.in);
+        AboutMe ati = new AboutMe(read.nextLine(), read.nextLine(), read.nextInt());
         System.out.println("My name is " + ati.myName() + ", and I attend " + ati.mySchool()
         + ". " + "I am " + ati.myAge() + " years old.");
     }
