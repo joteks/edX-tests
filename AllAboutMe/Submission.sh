@@ -69,3 +69,8 @@ javac SubGrader.java
 java SubGrader
 
 ###################################
+
+rm *.txt
+rm *.class
+
+###################################
