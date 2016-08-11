@@ -55,7 +55,13 @@ checkCompiles AboutMe.java
 
 ###################################
 
-/bin/bash CorrectCheck.sh . &> /dev/null
+javac AboutMe.java
+
+java AboutMe >& normresults.txt
+
+java AboutMe >& ecresults.txt < "Robyn\nPurdue\n20\n"
+
+perl CorrectCheck.pl >> score.txt
 
 ###################################
 

@@ -34,8 +34,8 @@ public class AboutMe
     }
     public static void main(String[] args) {
         System.out.println("Hello");
-        AboutMe Ati = new AboutMe("Ati", "West Lafayette High School", 15);
-        System.out.println("My name is " + Ati.myName() + ", and I attend " + Ati.mySchool()
-        + ". " + "I am " + Ati.myAge() + " years old.");
+        AboutMe ati = new AboutMe("Ati", "West Lafayette High School", 15);
+        System.out.println("My name is " + ati.myName() + ", and I attend " + ati.mySchool()
+        + ". " + "I am " + ati.myAge() + " years old.");
     }
 }
