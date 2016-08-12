@@ -50,17 +50,17 @@ function finish()
 
 ###################################
 
-checkExists AboutMe.java
+checkExists Associative.java
 
 ###################################
 
 perl RegexCheck.pl >> score.txt
  
-wc -l AboutMe.java | grep -e "^.*[[:digit:]][[:digit:]] AboutMe.java.*$" &> /dev/null && echo "10:true" >> score.txt
+wc -l Associative.java | grep -e "^.*[[:digit:]][[:digit:]] Associative.java.*$" &> /dev/null && echo "10:true" >> score.txt
 
 ###################################
 
-checkCompiles AboutMe.java &> temp.txt
+checkCompiles Associative.java &> temp.txt
 
 if [ "$compiled" = false ]; then
     finish
@@ -69,11 +69,11 @@ fi
 
 ###################################
 
-javac AboutMe.java
+javac Associative.java
 
-java AboutMe >& normresults.txt < norminput.doc
+java Associative >& normresults.txt < norminput.doc
 
-java AboutMe >& ecresults.txt < ecinput.doc
+java Associative >& ecresults.txt < ecinput.doc
 
 perl CorrectCheck.pl >> score.txt
 

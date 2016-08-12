@@ -3,7 +3,7 @@ use strict;
 use warnings;
 
 my $program;
-open(my $fh, '<', "AboutMe.java") or die "cannot open file AboutMe.java";
+open(my $fh, '<', "Associative.java") or die "cannot open file Associative.java";
 {
 	local $/;
 	$program = <$fh>;
