@@ -44,8 +44,8 @@ function finish()
 {
     javac SubGrader.java
     java SubGrader
-    #rm *.txt
-    #rm *.class
+    rm *.txt
+    rm *.class
 }
 
 ###################################

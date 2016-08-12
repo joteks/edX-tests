@@ -1,42 +1,33 @@
-/**
- * Project 1, Topic 1: AboutMe.java
- * 
- * @author T. Copeland
- *
- */
+ import java.io.*;
+import static java.lang.System.*;
 
-public class AboutMe {
-    private String name;
-    private String school;
-    private String age;
+import java.util.Scanner;
+import java.lang.Math;
+import java.util.*;
 
-    public AboutMe(String name, String school, String age) {
-        this.name = name;
-        this.school = school;
-        this.age = age;
-    }
-
-    public String myName() {
-        return name;
-    }
-
-    public String mySchool() {
-        return school;
-    }
-
-    public String myAge() {
-        return age;
-    }
+public class AboutMe{
+  String myName () {
+   String name = "Nithya";
+   return name;
+  }
+  String mySchool () {
+   String school = "homeschool";
+   return school;
+  }
+  int myAge () {
+   int age = 12;
+   return age;
+  }
+  
+  
+  public static void main (String[] str) throws IOException {
+   System.out.println("Hello");
+   AboutMe m = new AboutMe();
+   AboutMe s = new AboutMe();
+   AboutMe a = new AboutMe();
+   System.out.println("My name is " + m.myName() + ", and I attend " + s.mySchool() + ". I am " + a.myAge() + " years old.");
     
-    /**
-     * @param args  name school age
-     */
-
-    public static void main(String[] args) {
-        AboutMe me = new AboutMe(args[0], args[1], args[2]);
-        
-        System.out.println("My name is " + me.getName() + " and I attend "
-                + me.getSchool() + ". I am " + me.getAge() + " years old.");
-    }
+    
+  } 
 
 }
