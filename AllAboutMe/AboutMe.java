@@ -1,44 +1,42 @@
-
-import java.util.Scanner;
-
 /**
-
- * Topic 1, Project 1 : AboutMe.java
-
- * @author Aditi Acharya
-
+ * Project 1, Topic 1: AboutMe.java
  * 
-
+ * @author T. Copeland
+ *
  */
-public class AboutMe
-{
-    String myName;
-    String mySchool;
-    int myAge;
+
+public class AboutMe {
+    private String name;
+    private String school;
+    private String age;
+
+    public AboutMe(String name, String school, String age) {
+        this.name = name;
+        this.school = school;
+        this.age = age;
+    }
+
+    public String myName() {
+        return name;
+    }
+
+    public String mySchool() {
+        return school;
+    }
+
+    public String myAge() {
+        return age;
+    }
     
-    public AboutMe(String a, String b, int c )
-    {
-        this.myName = a;
-        this.mySchool = b;
-        this.myAge = c;
-    }
-    public String myName()
-    {
-        return myName;
-    }
-    public String mySchool()
-    {
-        return mySchool;
-    }
-    public int myAge()
-    {
-        return myAge;
-    }
+    /**
+     * @param args  name school age
+     */
+
     public static void main(String[] args) {
-        System.out.println("Hello");
-        Scanner read = new Scanner(System.in);
-        AboutMe ati = new AboutMe(read.nextLine(), read.nextLine(), read.nextInt());
-        System.out.println("My name is " + ati.myName() + ", and I attend " + ati.mySchool()
-        + ". " + "I am " + ati.myAge() + " years old.");
+        AboutMe me = new AboutMe(args[0], args[1], args[2]);
+        
+        System.out.println("My name is " + me.getName() + " and I attend "
+                + me.getSchool() + ". I am " + me.getAge() + " years old.");
     }
+
 }

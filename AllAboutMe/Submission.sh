@@ -25,18 +25,27 @@ function checkExists()
     done
 }
 
+compiled=false
+
 function checkCompiles()
 {
     javac $1 &> compiled.txt
-    compilerOutput=`cat compiled.txt` &> /dev/null
+    compilerOutput=`cat compiled.txt`
     if ["$compilerOutput" = ""]; then
         echo "11:true" >> score.txt
+        compiled=true
     else
         echo "11:false" >> score.txt
-        javac SubGrader.java
-        java SubGrader
-        exit 1
+        compiled=false
     fi
+}
+
+function finish()
+{
+    javac SubGrader.java
+    java SubGrader
+    #rm *.txt
+    #rm *.class
 }
 
 ###################################
@@ -51,26 +60,23 @@ wc -l AboutMe.java | grep -e "^.*[[:digit:]][[:digit:]] AboutMe.java.*$" &> /dev
 
 ###################################
 
-checkCompiles AboutMe.java
+checkCompiles AboutMe.java &> temp.txt
+
+if [ "$compiled" = false ]; then
+    finish
+    exit 1
+fi
 
 ###################################
 
 javac AboutMe.java
 
-java AboutMe >& normresults.txt
+java AboutMe >& normresults.txt < norminput.doc
 
-java AboutMe >& ecresults.txt < "Robyn\nPurdue\n20\n"
+java AboutMe >& ecresults.txt < ecinput.doc
 
 perl CorrectCheck.pl >> score.txt
 
 ###################################
 
-javac SubGrader.java
-java SubGrader
-
-###################################
-
-rm *.txt
-rm *.class
-
-###################################
+finish
