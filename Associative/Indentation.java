@@ -26,9 +26,10 @@ public class Indentation {
 				x = 0;
 				spaces = 0;
 				blankline = false;
+				c = 'a';
 				
 				line = read.nextLine();
-				while (x < line.length() && (c = line.charAt(x)) == ' ') {
+				while (x < line.length() && (c = line.charAt(x)) == ' ' || c == '\t') {
 					spaces++;
 					x++;
 				}
