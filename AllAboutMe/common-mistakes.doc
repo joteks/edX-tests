@@ -11,3 +11,5 @@ Imprecise output: extra space, incorrect formatting, etc.
 myName(), myAge(), and mySchool() methods are static
 
 Tests fail if extra credit is not complete, make sure students know this
+
+The greeting should be on its own line, and the required output should be after it

@@ -16,8 +16,10 @@ public class SubGrader {
 
 	static double[] totals;
 
-	//Change each project
+	//ADD all files to check for indentation
+	static String[] PROJECT = {"AboutMe.java"};
 
+	//Change each project test cases, make sure checking for indentation is the last test case
 	static Test[] tests = {
 		new Test("AboutMe.java file exists", 0, 1), //0
 		new Test("AboutMe class header", 0, 1),  //1
@@ -60,8 +62,16 @@ public class SubGrader {
 				}
 			}
 
-			tests[15].passed = Indentation.assess("AboutMe.java");
-			totals[tests[15].group] += tests[15].point;
+			tests[tests.length-1].passed = true;
+			for (int i = 0; i < PROJECT.length; i++) {
+				if (!Indentation.assess(PROJECT[i])) {
+					tests[tests.length-1].passed = false;
+					break;
+				}
+			}
+			if (tests[tests.length-1].passed) {
+				totals[tests[tests.length-1].group] += tests[tests.length-1].point;
+			}
 
 			for (int i = 0; i < tests.length; i++) {
 				if (!tests[i].passed) {

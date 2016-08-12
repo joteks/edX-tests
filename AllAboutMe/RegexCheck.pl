@@ -11,7 +11,7 @@ open(my $fh, '<', "AboutMe.java") or die "cannot open file AboutMe.java";
 close($fh);
 
 print "1:true\n" if $program =~ /public[[:space:]]*class[[:space:]]*AboutMe/s;
-print "2:true\n" if $program =~ /static[[:space:]]*void[[:space:]]*main[[:space:]]*\([[:space:]]*String(\[\])*[[:space:]]*[[:alnum:]]*(\[\])*[[:space:]]*\)/s;
+print "2:true\n" if $program =~ /static[[:space:]]*void[[:space:]]*main[[:space:]]*\([[:space:]]*String[[:space:]]*(\[\])*[[:space:]]*[[:alnum:]]*[[:space:]]*(\[\])*[[:space:]]*\)/s;
 print "3:true\n" if $program =~ /String[[:space:]]*myName[[:space:]]*\([[:space:]]*\)/s;
 print "4:true\n" if $program =~ /String[[:space:]]*mySchool[[:space:]]*\([[:space:]]*\)/s;
 print "5:true\n" if $program =~ /int[[:space:]]*myAge[[:space:]]*\([[:space:]]*\)/s;
