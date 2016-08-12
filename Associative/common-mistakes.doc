@@ -1,0 +1,15 @@
+Using command line arguements instead of reading input lines in main method extra credit
+
+Using "getName()" instead of "myName()"
+
+Recording age as a String instead of an int
+
+Not including a greeting
+
+Imprecise output: extra space, incorrect formatting, etc.
+
+myName(), myAge(), and mySchool() methods are static
+
+Tests fail if extra credit is not complete, make sure students know this
+
+The greeting should be on its own line, and the required output should be after it
