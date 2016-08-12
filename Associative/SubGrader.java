@@ -21,12 +21,13 @@ public class SubGrader {
 
 	//Change each project test cases, make sure checking for indentation is the last test case
 	static Test[] tests = {
-		new Test("AboutMe.java file exists", 0, 1), //0
-		new Test("AboutMe class header", 0, 1),  //1
+		new Test("Associative.java file exists", 0, 1), //0
+		new Test("Associative class header", 0, 1),  //1
 		new Test("Main method signature", 0, 1), //2
-		new Test("myName method signature", 0, 0.5), //3
-		new Test("mySchool method signature", 0, 0.5), //4
-		new Test("myAge method signature", 0, 1), //5
+		new Test("firstTwo method signature", 0, 0.5), //3
+		new Test("lastTwo method signature", 0, 0.5), //4
+		new Test("Main method body creates a Scanner object", 0, 1), //5
+		
 		new Test("Main method uses myName, mySchool, and myAge method calls", 0, 2), //6
 		new Test("Extra Credit: constructor signature", 4, 1), //7
 		new Test("Extra Credit: use of 'this' and class variables", 4, 1), //8

@@ -10,11 +10,11 @@ open(my $fh, '<', "Associative.java") or die "cannot open file Associative.java"
 }
 close($fh);
 
-print "1:true\n" if $program =~ /public[[:space:]]*class[[:space:]]*AboutMe/s;
+print "1:true\n" if $program =~ /public[[:space:]]*class[[:space:]]*Associative/s;
 print "2:true\n" if $program =~ /static[[:space:]]*void[[:space:]]*main[[:space:]]*\([[:space:]]*String[[:space:]]*(\[\])*[[:space:]]*[[:alnum:]]*[[:space:]]*(\[\])*[[:space:]]*\)/s;
-print "3:true\n" if $program =~ /String[[:space:]]*myName[[:space:]]*\([[:space:]]*\)/s;
-print "4:true\n" if $program =~ /String[[:space:]]*mySchool[[:space:]]*\([[:space:]]*\)/s;
-print "5:true\n" if $program =~ /int[[:space:]]*myAge[[:space:]]*\([[:space:]]*\)/s;
+print "3:true\n" if $program =~ /(int|double)[[:space:]]*firstTwo[[:space:]]*\([[:space:]]*\)/s;
+print "4:true\n" if $program =~ /(int|double)[[:space:]]*lastTwo[[:space:]]*\([[:space:]]*\)/s;
+print "5:true\n" if $program =~ /main.*{.*Scanner[[:space:]]*[[:alnum:]]*[[:space:]]=[[:space:]]new[[:space:]]Scanner[[:space:]]*\([[:space:]]System.in[[:space:]]\)[[:space:]];/s;
 print "6:true\n" if (($program =~ /[[:alnum:]]\.mySchool\(.*\)/s) && 
 	($program =~ /[[:alnum:]]\.myAge\(.*\)/s) && 
 	($program =~ /[[:alnum:]]\.myName\(.*\)/s));
