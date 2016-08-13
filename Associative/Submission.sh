@@ -32,10 +32,10 @@ function checkCompiles()
     javac $1 &> compiled.txt
     compilerOutput=`cat compiled.txt`
     if ["$compilerOutput" = ""]; then
-        echo "11:true" >> score.txt
+        echo "17:true" >> score.txt
         compiled=true
     else
-        echo "11:false" >> score.txt
+        echo "17:false" >> score.txt
         compiled=false
     fi
 }
@@ -56,7 +56,7 @@ checkExists Associative.java
 
 perl RegexCheck.pl >> score.txt
  
-wc -l Associative.java | grep -e "^.*[[:digit:]][[:digit:]] Associative.java.*$" &> /dev/null && echo "10:true" >> score.txt
+wc -l Associative.java | grep -e "^.*[[:digit:]][[:digit:]] Associative.java.*$" &> /dev/null && echo "13:true" >> score.txt
 
 ###################################
 
