@@ -27,9 +27,9 @@ public class SubGrader {
 		new Test("firstTwo method signature", 0, 0.5), //3
 		new Test("lastTwo method signature", 0, 0.5), //4
 		new Test("Main method body creates a Scanner object", 0, 1), //5
-		
-		new Test("Main method uses myName, mySchool, and myAge method calls", 0, 2), //6
-		new Test("Extra Credit: constructor signature", 4, 1), //7
+		new Test("Main method prompts the user for input", 0, 2), //6
+		new Test("Main method creates new Associative object with user input", 4, 1), //7
+
 		new Test("Extra Credit: use of 'this' and class variables", 4, 1), //8
 		new Test("Uses camel casing", 2, 1), //9
 		new Test("Blocks are well defined", 2, 1), //10
