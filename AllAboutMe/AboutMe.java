@@ -44,7 +44,7 @@ public class AboutMe {
      AboutMe t = new AboutMe(myName, mySchool, myAge);
      
      
-     System.out.println("Hello my name is " + t.myName() + ", and I attend " + t.mySchool() +  ". I am " + t.myAge() + " years old." );
+     System.out.println("My name is " + t.myName() + ", and I attend " + t.mySchool() +  ". I am " + t.myAge() + " years old." );
      System.out.println("Thank you!");
    }
 }

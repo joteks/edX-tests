@@ -27,19 +27,20 @@ public class SubGrader {
 		new Test("firstTwo method signature", 0, 1), //3
 		new Test("lastTwo method signature", 0, 1), //4
 		new Test("Main method body creates a Scanner object", 0, 1), //5
-		new Test("Main method prompts the user for input", 0, 2), //6
+		new Test("Main method prompts the user for input", 0, 1), //6
 		new Test("Main method creates new Associative object", 0, 1), //7
 		new Test("Main method stores integers from standard input", 0, 1), //8
 		new Test("Main method printed statement", 0, 2), //9
 		new Test("Created 3 integer class variables", 0, 1), //10
 		new Test("firstTwo and lastTwo return statements exist", 0, 1), //11
-		new Test("Constructor signature", 0, 2), //12
+		new Test("Constructor signature", 0, 1), //12
 		new Test("Blocks are clearly defined", 2, 1), //13
 		new Test("Correct output: prompts user", 1, 1), //14
-		new Test("Correct output: firstTwo", 1, 2), //15
-		new Test("Correct output: lastTwo", 1, 2), //16
+		new Test("Correct output: firstTwo", 1, 1.5), //15
+		new Test("Correct output: lastTwo", 1, 1.5), //16
 		new Test("Associative.java compiles", 0, 1), //17
-		new Test("Indentation is consistant", 2, 1) //18
+		new Test("Used camel casing for methods and classes", 2, 1), //18
+		new Test("Indentation is consistant", 2, 1) //19
 	};
 
 	public static void main(String[] args) {
