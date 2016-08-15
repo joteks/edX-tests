@@ -22,3 +22,9 @@ print "9:true\n" if $program =~ /main.*firstTwo[[:space:]]*\([[:space:]]*\).*las
 print "10:true\n" if $program =~ /int[[:space:]]*[[:alnum:]]*[[:space:]]*;.*int[[:space:]]*[[:alnum:]]*[[:space:]]*;.*int[[:space:]]*[[:alnum:]]*[[:space:]]*;/s;
 print "11:true\n" if $program =~ /firstTwo.*return.*lastTwo.*return/s;
 print "12:true\n" if $program =~ /Associative[[:space:]]*\([[:space:]]*int[[:space:]]*[[:alnum:]]*[[:space:]]*,[[:space:]]*int[[:space:]]*[[:alnum:]]*[[:space:]]*,[[:space:]]*int[[:space:]]*[[:alnum:]]*[[:space:]]*\)/s;
+print "18:true\n" if (
+	($program !~ /String[[:space:]]*[[:upper:]]([[:lower:]]|[[:digit:]])/s) && 
+	($program !~ /int[[:space:]]*[[:upper:]]([[:lower:]]|[[:digit:]])/s) && 
+	($program !~ /double[[:space:]]*[[:upper:]]([[:lower:]]|[[:digit:]])/s) && 
+	($program !~ /AboutMe[[:space:]]*[[:upper:]]([[:lower:]]|[[:digit:]])/s)
+	);
