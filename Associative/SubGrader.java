@@ -40,7 +40,7 @@ public class SubGrader {
 		new Test("Correct output: lastTwo", 1, 1.5), //16
 		new Test("Associative.java compiles", 0, 1), //17
 		new Test("Used camel casing for methods and classes", 2, 1), //18
-		new Test("Indentation is consistant", 2, 1) //19
+		new Test("One statement per line", 2, 1) //19
 	};
 
 	public static void main(String[] args) {
@@ -64,17 +64,6 @@ public class SubGrader {
 					tests[testnum].passed = true;
 					totals[tests[testnum].group] += tests[testnum].point;
 				}
-			}
-
-			tests[tests.length-1].passed = true;
-			for (int i = 0; i < PROJECT.length; i++) {
-				if (!Indentation.assess(PROJECT[i])) {
-					tests[tests.length-1].passed = false;
-					break;
-				}
-			}
-			if (tests[tests.length-1].passed) {
-				totals[tests[tests.length-1].group] += tests[tests.length-1].point;
 			}
 
 			for (int i = 0; i < tests.length; i++) {

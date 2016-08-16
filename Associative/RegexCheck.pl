@@ -16,7 +16,7 @@ print "3:true\n" if $program =~ /(int|double)[[:space:]]*firstTwo[[:space:]]*\([
 print "4:true\n" if $program =~ /(int|double)[[:space:]]*lastTwo[[:space:]]*\([[:space:]]*\)/s;
 print "5:true\n" if $program =~ /main.*{.*Scanner[[:space:]]*[[:alnum:]]*[[:space:]]*=[[:space:]]*new[[:space:]]*Scanner[[:space:]]*\([[:space:]]*System\.in[[:space:]]*\);/s;
 print "6:true\n" if $program =~ /main.*{.*System\.out.*\([[:space:]]*[[:space:]]*.*next/s;
-print "7:true\n" if $program =~ /main.*{.*Associative[[:space:]]*[[:alnum:]]*[[:space:]]*=[[:space:]]new[[:space:]]Associative[[:space:]]*\([[:space:]]*([[:alnum:]]|\.)*[[:space:]]*,[[:space:]]*([[:alnum:]]|\.)*[[:space:]]*,[[:space:]]*([[:alnum:]]|\.)*[[:space:]]*\)[[:space:]]*;/s;
+print "7:true\n" if $program =~ /main(.|\n)*{.*Associative[[:space:]]*[[:alnum:]]*[[:space:]]*=[[:space:]]new[[:space:]]Associative[[:space:]]*\(/s;
 print "8:true\n" if $program =~ /[[:alnum:]]*\.next.*[[:alnum:]]*\.next.*[[:alnum:]]*\.next/s;
 print "9:true\n" if $program =~ /main.*firstTwo[[:space:]]*\([[:space:]]*\).*lastTwo[[:space:]]*\([[:space:]]*\)/s;
 print "10:true\n" if $program =~ /int[[:space:]]*[[:alnum:]]*[[:space:]]*;.*int[[:space:]]*[[:alnum:]]*[[:space:]]*;.*int[[:space:]]*[[:alnum:]]*[[:space:]]*;/s;
@@ -28,3 +28,9 @@ print "18:true\n" if (
 	($program !~ /double[[:space:]]*[[:upper:]]([[:lower:]]|[[:digit:]])/s) && 
 	($program !~ /AboutMe[[:space:]]*[[:upper:]]([[:lower:]]|[[:digit:]])/s)
 	);
+print "19:true\n" if $program !~ /;(?:[^\r\n]|\r(?!\n))*;/g;
+print "13:true\n" if (
+	($program !~ /{(?:[^\r\n]|\r(?!\n))*{/g) &&
+	($program !~ /}(?:[^\r\n]|\r(?!\n))*}/g)
+	);
+

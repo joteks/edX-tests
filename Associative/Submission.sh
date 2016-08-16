@@ -56,8 +56,6 @@ checkExists Associative.java
 
 perl RegexCheck.pl >> score.txt
  
-wc -l Associative.java | grep -e "^.*[[:digit:]][[:digit:]] Associative.java.*$" &> /dev/null && echo "13:true" >> score.txt
-
 ###################################
 
 checkCompiles Associative.java &> temp.txt
