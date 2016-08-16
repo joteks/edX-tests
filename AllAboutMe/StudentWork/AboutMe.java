@@ -34,12 +34,10 @@ public class AboutMe {
      String myName = n.nextLine();
      
      System.out.println("What school do you attend?");
-     Scanner s = new Scanner(System.in);
-     String mySchool = s.nextLine();
+     String mySchool = n.nextLine();
      
      System.out.println("What is your age?");
-     Scanner a = new Scanner(System.in);
-     int myAge= a.nextInt();
+     int myAge= n.nextInt();
      
      AboutMe t = new AboutMe(myName, mySchool, myAge);
      

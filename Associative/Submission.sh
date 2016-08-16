@@ -70,11 +70,15 @@ fi
 
 ###################################
 
-javac Work/Associative.java
+cd Work
 
-java Work/Associative >& normresults.txt < norminput.doc
+javac Associative.java
 
-java Work/Associative >& ecresults.txt < ecinput.doc
+java Associative >& ../normresults.txt < ../norminput.doc
+
+java Associative >& ../ecresults.txt < ../ecinput.doc
+
+cd ../
 
 perl CorrectCheck.pl >> score.txt
 

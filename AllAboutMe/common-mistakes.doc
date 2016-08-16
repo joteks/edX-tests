@@ -13,3 +13,5 @@ myName(), myAge(), and mySchool() methods are static
 Tests fail if extra credit is not complete, make sure students know this
 
 The greeting should be on its own line, and the required output should be after it
+
+Only use one Scanner object. When testing project by hand, multiple Scanner objects will do the trick, but when you are testing using input files, multiple Scanners do not work.
