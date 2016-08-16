@@ -1,5 +1,7 @@
 #!/bin/bash
 
+java -jar ./jcp-6.0.0.jar --r --i:./StudentWork --o:./Work &> temp.txt
+
 if [ ! -e score.txt ]; then
     > score.txt
 else
@@ -46,11 +48,12 @@ function finish()
     java SubGrader
     rm *.txt
     rm *.class
+    rm Work/*
 }
 
 ###################################
 
-checkExists Associative.java
+checkExists Work/Associative.java
 
 ###################################
 
@@ -58,7 +61,7 @@ perl RegexCheck.pl >> score.txt
  
 ###################################
 
-checkCompiles Associative.java &> temp.txt
+checkCompiles Work/Associative.java &> temp.txt
 
 if [ "$compiled" = false ]; then
     finish
@@ -67,11 +70,11 @@ fi
 
 ###################################
 
-javac Associative.java
+javac Work/Associative.java
 
-java Associative >& normresults.txt < norminput.doc
+java Work/Associative >& normresults.txt < norminput.doc
 
-java Associative >& ecresults.txt < ecinput.doc
+java Work/Associative >& ecresults.txt < ecinput.doc
 
 perl CorrectCheck.pl >> score.txt
 
