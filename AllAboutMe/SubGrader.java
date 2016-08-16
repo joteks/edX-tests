@@ -16,9 +16,6 @@ public class SubGrader {
 
 	static double[] totals;
 
-	//ADD all files to check for indentation
-	static String[] PROJECT = {"AboutMe.java"};
-
 	//Change each project test cases, make sure checking for indentation is the last test case
 	static Test[] tests = {
 		new Test("AboutMe.java file exists", 0, 1), //0
