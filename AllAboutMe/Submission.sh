@@ -70,11 +70,15 @@ fi
 
 ###################################
 
-javac Work/AboutMe.java
+cd Work
 
-java Work/AboutMe >& normresults.txt < norminput.doc
+javac AboutMe.java
 
-java Work/AboutMe >& ecresults.txt < ecinput.doc
+java AboutMe >& ../normresults.txt < ../norminput.doc
+
+java AboutMe >& ../ecresults.txt < ../ecinput.doc
+
+cd ../
 
 perl CorrectCheck.pl >> score.txt
 
