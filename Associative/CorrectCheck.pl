@@ -21,4 +21,4 @@ close($fh);
 
 print "14:true\n" if $norm =~ /[[:alnum:]]+[[:space:]]*.*Grouping/s;
 print "15:true\n" if $norm =~ /Grouping the first two terms, \(3 \+ 4\) \* 5 = 35/s;
-print "16:true\n" if $norm =~ /Grouping the first two terms, 3 \+ \(4 \* 5\) = 23/s;
+print "16:true\n" if $norm =~ /Grouping the last two terms, 3 \+ \(4 \* 5\) = 23/s;

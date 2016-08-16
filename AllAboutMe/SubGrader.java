@@ -36,7 +36,7 @@ public class SubGrader {
 		new Test("Main method greets user", 1, 1), //12
 		new Test("Main method correct output", 1, 3), //13
 		new Test("Extra Credit: correctly outputs information given", 4, 3), //14
-		new Test("Uses proper indentation", 2, 1) //15
+		new Test("One statement per line", 2, 1) //15
 	};
 
 	public static void main(String[] args) {
@@ -60,17 +60,6 @@ public class SubGrader {
 					tests[testnum].passed = true;
 					totals[tests[testnum].group] += tests[testnum].point;
 				}
-			}
-
-			tests[tests.length-1].passed = true;
-			for (int i = 0; i < PROJECT.length; i++) {
-				if (!Indentation.assess(PROJECT[i])) {
-					tests[tests.length-1].passed = false;
-					break;
-				}
-			}
-			if (tests[tests.length-1].passed) {
-				totals[tests[tests.length-1].group] += tests[tests.length-1].point;
 			}
 
 			for (int i = 0; i < tests.length; i++) {

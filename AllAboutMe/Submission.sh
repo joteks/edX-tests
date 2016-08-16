@@ -56,8 +56,6 @@ checkExists AboutMe.java
 
 perl RegexCheck.pl >> score.txt
  
-wc -l AboutMe.java | grep -e "^.*[[:digit:]][[:digit:]] AboutMe.java.*$" &> /dev/null && echo "10:true" >> score.txt
-
 ###################################
 
 checkCompiles AboutMe.java &> temp.txt
