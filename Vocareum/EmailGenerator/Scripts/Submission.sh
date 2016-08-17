@@ -56,7 +56,7 @@ function finish()
 
 ###################################
 
-checkExists Work/AboutMe.java
+checkExists Work/EmailGenerator.java
 
 ###################################
 
@@ -66,7 +66,7 @@ perl $ASNLIB/RegexCheck.pl $(pwd) >> score.txt
  
 ###################################
 
-checkCompiles Work/AboutMe.java &> temp.txt
+checkCompiles Work/EmailGenerator.java &> temp.txt
 
 if [ "$compiled" = false ]; then
     finish
@@ -77,11 +77,11 @@ fi
 
 cd Work
 
-javac AboutMe.java
+javac EmailGenerator.java
 
-java AboutMe >& ../normresults.txt < $ASNLIB/norminput.doc
+java EmailGenerator >& ../normresults.txt < $ASNLIB/norminput.doc
 
-java AboutMe >& ../ecresults.txt < $ASNLIB/ecinput.doc
+java EmailGenerator >& ../ecresults.txt < $ASNLIB/ecinput.doc
 
 cd ../
 

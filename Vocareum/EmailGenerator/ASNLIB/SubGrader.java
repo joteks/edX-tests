@@ -23,19 +23,22 @@ public class SubGrader {
 		new Test("EmailGenerator.java file exists", 0, 1), //0
 		new Test("EmailGenerator class header", 0, 1),  //1
 		new Test("Main method signature", 0, 1), //2
-		new Test("makeUserName method signature", 0, 1), //3
-		new Test("makeEmail method signature", 0, 1), //4
+		new Test("makeUserName method prototype", 0, 1), //3
+		new Test("makeEmail method prototype", 0, 1), //4
 		new Test("Main method created Scanner", 0, 1), //5
 		new Test("Main method stored two Strings from standard input", 0, 2), //6
-		new Test("", 4, 1), //7
-		new Test("Extra Credit: use of 'this' and class variables", 4, 1), //8
-		new Test("Uses camel casing", 2, 1), //9
-		new Test("Blocks are well defined", 2, 1), //10
-		new Test("AboutMe.java compiles", 0, 1), //11
-		new Test("Main method greets user", 1, 1), //12
-		new Test("Main method correct output", 1, 3), //13
-		new Test("Extra Credit: correctly outputs information given", 4, 3), //14
-		new Test("One statement per line", 2, 1) //15
+		new Test("Printed statement using makeUserName method call", 0, 1), //7
+		new Test("Printed statement using makeEmail method call", 0, 1), //8
+		new Test("Return statements exist", 0, 1), //9
+		new Test("Uses camel casing", 2, 1), //10
+		new Test("Blocks are well defined", 2, 1), //11
+		new Test("One statement per line", 2, 1), //12
+		new Test("EmailGenerator.java compiles", 0, 1), //13
+		new Test("Prompts user for input", 1, 1), //14
+		new Test("Output is correct", 1, 3), //15
+		new Test("Extra Credit: shortens last name if too long", 4, 1), //16
+		new Test("Extra Credit: adds first name if last name is too short", 4, 1), //17
+		new Test("Extra Credit: adds characters to email if both names are too short", 4, 1) //18
 	};
 
 	public static void main(String[] args) {
