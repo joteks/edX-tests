@@ -58,7 +58,11 @@ checkExists Work/AboutMe.java
 ###################################
 
 perl RegexCheck.pl >> score.txt
- 
+cd Work
+if [ $(grep ';.*;' AboutMe.java) = $(grep 'for.*;.*;' AboutMe.java) ]; then
+	echo 11:true >> score.txt
+fi 
+cd ..
 ###################################
 
 checkCompiles Work/AboutMe.java &> temp.txt

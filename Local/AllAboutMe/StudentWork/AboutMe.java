@@ -18,7 +18,10 @@ public class AboutMe {
     
   
   public String myName(){
-    return myName;
+    for (int i = 0; i < 1; i++) {
+	int x = 0;
+	}
+	return myName;
   }
   public String mySchool() {
     return mySchool;
