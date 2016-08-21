@@ -1,4 +1,4 @@
-# edX-tests
+#edX-tests
 ## Local
 The Local directory contains portable files for each project. To run tests on any of the projects: 
    1. Navigate to a project directory (ex. Local/AllAboutMe)
@@ -13,9 +13,8 @@ RegexCheck.pl is a perl script that runs regex checks against a project (wether 
 CorrectCheck.pl is a perl script that compiles the project, and runs the program with different inputs, then checks the output with regex then outputs to score.txt
 Subgrader.java is a java program that defines all of the tests and processes score.txt then assigns the proper scores to the different categories
 
-
 ##ProjectAnswers
 Solutions for all of the Vocareum projects
 
 ##Rubrics
-
+Instructions and rubrics for all of the projects
