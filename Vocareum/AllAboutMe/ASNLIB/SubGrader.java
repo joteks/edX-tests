@@ -1,3 +1,4 @@
+ 
 import java.lang.Integer;
 import java.util.Scanner;
 import java.io.File;
@@ -23,10 +24,10 @@ public class SubGrader {
 		new Test("AboutMe.java file exists", 0, 1), //0
 		new Test("AboutMe class header", 0, 1),  //1
 		new Test("Main method signature", 0, 1), //2
-		new Test("myName method signature", 0, 0.5), //3
-		new Test("mySchool method signature", 0, 0.5), //4
+		new Test("myName method signature", 0, 1), //3
+		new Test("mySchool method signature", 0, 1), //4
 		new Test("myAge method signature", 0, 1), //5
-		new Test("Main method uses myName, mySchool, and myAge method calls", 0, 2), //6
+		new Test("Main method uses myName, mySchool, and myAge method calls", 0, 1), //6
 		new Test("Extra Credit: constructor signature", 4, 1), //7
 		new Test("Extra Credit: use of 'this' and class variables", 4, 1), //8
 		new Test("Uses camel casing", 2, 1), //9

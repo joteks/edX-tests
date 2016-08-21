@@ -1,8 +1,6 @@
+ 
+ 
 #!/bin/bash
-
-rm *.txt > temp.txt
-rm *.class > temp.txt
-rm -rf Work > temp.txt
 
 mkdir Work
 
@@ -51,6 +49,7 @@ function finish()
     rm *.txt > temp.txt
     rm *.class > temp.txt
     rm -rf Work > temp.txt
+    
     rm temp.txt
 }
 
@@ -61,6 +60,9 @@ checkExists Work/Associative.java
 ###################################
 
 perl $ASNLIB/RegexCheck.pl $(pwd) >> score.txt
+if [ "$(grep ';.*;' Associative.java)" = "$(grep 'for.*;.*;' Associative.java)" ]; then
+    echo 19:true >> score.txt
+fi
  
 ###################################
 

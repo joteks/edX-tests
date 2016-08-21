@@ -1,3 +1,4 @@
+ 
 import java.lang.Integer;
 import java.util.Scanner;
 import java.io.File;
@@ -93,8 +94,6 @@ public class SubGrader {
       	gi = new GradeInfo("Correctness", (int)Math.round(totals[1]));
       	g.addGrade(gi);      
       	gi = new GradeInfo("Style", (int)Math.round(totals[2]));
-      	g.addGrade(gi);
-      	gi = new GradeInfo("Extra Credit", (int)Math.round(totals[4]));
       	g.addGrade(gi);
 	}
   

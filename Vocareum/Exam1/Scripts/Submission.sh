@@ -1,3 +1,5 @@
+ 
+ 
 #/bin/bash!
 
 rm *.txt >& temp.txt
@@ -17,13 +19,11 @@ function checkExists()
             echo 
             echo "Entity '$f' does not exist"
             echo 
-            echo "0:false" >> score.txt
             exit 1
         else
             echo 
             echo "Entity '$f' successful"
             echo 
-            echo "0:true" >> score.txt
         fi
     done
 }
@@ -35,10 +35,10 @@ function checkCompiles()
     javac $1 &> compiled.txt
     compilerOutput=`cat compiled.txt`
     if ["$compilerOutput" = ""]; then
-        echo "12:true" >> score.txt
+        echo "9:true" >> score.txt
         compiled=true
     else
-        echo "12:false" >> score.txt
+        echo "9:false" >> score.txt
         compiled=false
     fi
 }
@@ -79,17 +79,7 @@ cd Work
 
 javac Shoes.java
 
-java Shoes >& ../normresults.txt < $ASNLIB/norminput.doc
-
-java Shoes >& ../ecresults.txt < $ASNLIB/ecinput.doc
-
-java Shoes >& ../ecresults2.txt < $ASNLIB/ecinput2.doc
-
-java Shoes >& ../ecresults3.txt < $ASNLIB/ecinput3.doc
-
-java Shoes >& ../ecresults4.txt < $ASNLIB/ecinput4.doc
-
-java Shoes >& ../ecresults5.txt < $ASNLIB/ecinput5.doc
+java Shoes >& ../normresults.txt
 
 cd ../
 

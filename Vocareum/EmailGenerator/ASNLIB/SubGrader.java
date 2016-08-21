@@ -1,3 +1,4 @@
+ 
 import java.lang.Integer;
 import java.util.Scanner;
 import java.io.File;
@@ -31,8 +32,8 @@ public class SubGrader {
 		new Test("Printed statement using makeEmail method call", 0, 1), //8
 		new Test("Return statements exist", 0, 1), //9
 		new Test("Uses camel casing", 2, 1), //10
-		new Test("Blocks are well defined", 2, 1), //11
-		new Test("One statement per line", 2, 1), //12
+		new Test("One statement per line", 2, 1), //11
+		new Test("Blocks are well defined", 2, 1), //12
 		new Test("EmailGenerator.java compiles", 0, 1), //13
 		new Test("Prompts user for input", 1, 1), //14
 		new Test("Output is correct", 1, 3), //15
@@ -113,3 +114,4 @@ public class SubGrader {
       }
   	}
 }
+

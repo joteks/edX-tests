@@ -1,3 +1,4 @@
+ 
 #!/bin/bash/perl
 use strict;
 use warnings;
@@ -26,9 +27,7 @@ print "9:true\n" if (
 	($program !~ /double[[:space:]]*[[:upper:]]([[:lower:]]|[[:digit:]])/s) && 
 	($program !~ /AboutMe[[:space:]]*[[:upper:]]([[:lower:]]|[[:digit:]])/s)
 	);
-print "15:true\n" if $program !~ /;(?:[^\r\n]|\r(?!\n))*;/g;
 print "10:true\n" if (
 	($program !~ /{(?:[^\r\n]|\r(?!\n))*{/g) &&
 	($program !~ /}(?:[^\r\n]|\r(?!\n))*}/g)
 	);
-

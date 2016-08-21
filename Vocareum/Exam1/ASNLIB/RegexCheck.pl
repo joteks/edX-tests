@@ -1,3 +1,4 @@
+ 
 #!/bin/bash/perl
 use strict;
 use warnings;
@@ -19,4 +20,3 @@ print "5:true\n" if $program =~ /System.out.println[[:space:]]*\(/s;
 print "6:true\n" if $program =~ /System.out.println[[:space:]]*\(.*System.out.println[[:space:]]*\(/s;
 print "7:true\n" if $program =~ /main.*goodShoes[[:space:]]*\(/s;
 print "8:true\n" if $program =~ /main.*badShoes[[:space:]]*\(/s;
-

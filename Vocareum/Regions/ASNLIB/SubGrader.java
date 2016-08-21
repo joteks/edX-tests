@@ -1,3 +1,4 @@
+ 
 import java.lang.Integer;
 import java.util.Scanner;
 import java.io.File;
@@ -37,8 +38,8 @@ public class SubGrader {
 		new Test("Output is correct: New England", 1, 1), //14
 		new Test("Output is correct: Atlantic", 1, 1), //15
 		new Test("Output is correct: Southeast", 1, 1), //16
-		new Test("Output is correct: Midwest", 1, 1) //17
-		new Test("Output is correct: Great Plains", 1, 1) //18
+		new Test("Output is correct: Midwest", 1, 1), //17
+		new Test("Output is correct: Great Plains", 1, 1), //18
 		new Test("Output is correct: invalid input", 1, 1) //19
 	};
 
@@ -95,8 +96,6 @@ public class SubGrader {
       	g.addGrade(gi);      
       	gi = new GradeInfo("Style", (int)Math.round(totals[2]));
       	g.addGrade(gi);
-      	gi = new GradeInfo("Extra Credit", (int)Math.round(totals[4]));
-      	g.addGrade(gi);
 	}
   
     public static class Test {
@@ -114,3 +113,4 @@ public class SubGrader {
       }
   	}
 }
+

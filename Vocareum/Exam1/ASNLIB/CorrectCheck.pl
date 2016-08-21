@@ -1,3 +1,4 @@
+ 
 #/bin/bash/perl
 
 use strict;
@@ -13,4 +14,3 @@ close($fh);
 
 print "10:true\n" if $norm =~ /I really like your shoes!/s;
 print "11:true\n" if $norm =~ /What are THOSE?/s;
-

@@ -1,3 +1,4 @@
+ 
 #/bin/bash!
 
 rm *.txt >& temp.txt
@@ -19,9 +20,9 @@ function checkExists()
             echo 
             echo "0:false" >> score.txt
             exit 1
-		else
+        else
             echo 
-			echo "Entity '$f' successful"
+            echo "Entity '$f' successful"
             echo 
             echo "0:true" >> score.txt
         fi
@@ -35,23 +36,23 @@ function checkCompiles()
     javac $1 &> compiled.txt
     compilerOutput=`cat compiled.txt`
     if ["$compilerOutput" = ""]; then
-        echo "11:true" >> score.txt
+        echo "12:true" >> score.txt
         compiled=true
     else
-        echo "11:false" >> score.txt
+        echo "12:false" >> score.txt
         compiled=false
     fi
 }
 
 function finish()
 {
-	cd $work
-	javac -d . -cp .:$VLIB/java/voc-grader.jar:$VLIB/java/junit-4.12.jar:$VLIB/java/hamcrest-core-1.3.jar $ASNLIB/SubGrader.java
-	java  -cp .:$VLIB/java/voc-grader.jar:$VLIB/java/junit-4.12.jar:$VLIB/java/hamcrest-core-1.3.jar SubGrader $(pwd)
+    cd $work
+    javac -d . -cp .:$VLIB/java/voc-grader.jar:$VLIB/java/junit-4.12.jar:$VLIB/java/hamcrest-core-1.3.jar $ASNLIB/SubGrader.java
+    java  -cp .:$VLIB/java/voc-grader.jar:$VLIB/java/junit-4.12.jar:$VLIB/java/hamcrest-core-1.3.jar SubGrader $(pwd)
     rm *.txt >& temp.txt
     rm *.class >& temp.txt
-	rm -rf Work >& temp.txt
-	rm temp.txt
+    rm -rf Work >& temp.txt
+    rm temp.txt
 }
 
 ###################################
@@ -63,6 +64,9 @@ checkExists Work/Regions.java
 cd $work
 
 perl $ASNLIB/RegexCheck.pl $(pwd) >> score.txt
+if [ "$(grep ';.*;' Regions.java)" = "$(grep 'for.*;.*;' Regions.java)" ]; then
+    echo 10:true >> score.txt
+fi
  
 ###################################
 
@@ -82,6 +86,14 @@ javac Regions.java
 java Regions >& ../normresults.txt < $ASNLIB/norminput.doc
 
 java Regions >& ../ecresults.txt < $ASNLIB/ecinput.doc
+
+java Regions >& ../ecresults2.txt < $ASNLIB/ecinput2.doc
+
+java Regions >& ../ecresults3.txt < $ASNLIB/ecinput3.doc
+
+java Regions >& ../ecresults4.txt < $ASNLIB/ecinput4.doc
+
+java Regions >& ../ecresults5.txt < $ASNLIB/ecinput5.doc
 
 cd ../
 

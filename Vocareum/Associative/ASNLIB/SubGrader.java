@@ -1,3 +1,4 @@
+ 
 import java.lang.Integer;
 import java.util.Scanner;
 import java.io.File;
@@ -34,8 +35,8 @@ public class SubGrader {
 		new Test("Constructor signature", 0, 1), //12
 		new Test("Blocks are clearly defined", 2, 1), //13
 		new Test("Correct output: prompts user", 1, 1), //14
-		new Test("Correct output: firstTwo", 1, 1.5), //15
-		new Test("Correct output: lastTwo", 1, 1.5), //16
+		new Test("Correct output: firstTwo", 1, 2), //15
+		new Test("Correct output: lastTwo", 1, 1), //16
 		new Test("Associative.java compiles", 0, 1), //17
 		new Test("Used camel casing for methods and classes", 2, 1), //18
 		new Test("One statement per line", 2, 1) //19
@@ -94,8 +95,6 @@ public class SubGrader {
       	g.addGrade(gi);      
       	gi = new GradeInfo("Style", (int)Math.round(totals[2]));
       	g.addGrade(gi);
-      	gi = new GradeInfo("Extra Credit", (int)Math.round(totals[4]));
-      	g.addGrade(gi);
 	}
   
     public static class Test {
@@ -113,3 +112,4 @@ public class SubGrader {
       }
   	}
 }
+

@@ -1,3 +1,4 @@
+ 
 #/bin/bash/perl
 
 use strict;
@@ -8,14 +9,6 @@ open(my $fh, '<', "normresults.txt") or die "cannot open file normresults.txt";
 {
 	local $/;
 	$norm = <$fh>;
-}
-close($fh);
-
-my $extra;
-open($fh, '<', "ecresults.txt") or die "cannot open file ecresults.txt";
-{
-	local $/;
-	$extra = <$fh>;
 }
 close($fh);
 
